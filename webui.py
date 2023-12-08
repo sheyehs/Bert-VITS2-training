@@ -217,21 +217,15 @@ if __name__ == "__main__":
         with gr.Row():
             with gr.Column():
                 text = gr.TextArea(
-                    label="输入文本内容",
+                    label="Text Input",
                     placeholder="""
-                    如果你选择语言为\'mix\'，必须按照格式输入，否则报错:
-                        格式举例(zh是中文，jp是日语，不区分大小写；说话人举例:gongzi):
-                         [说话人1]<zh>你好，こんにちは！ <jp>こんにちは，世界。
-                         [说话人2]<zh>你好吗？<jp>元気ですか？
-                         [说话人3]<zh>谢谢。<jp>どういたしまして。
-                         ...
-                    另外，所有的语言选项都可以用'|'分割长段实现分句生成。
+                    Input your text content
                     """,
                 )
                 trans = gr.Button("中翻日", variant="primary")
                 slicer = gr.Button("快速切分", variant="primary")
                 speaker = gr.Dropdown(
-                    choices=speakers, value=speakers[0], label="选择说话人"
+                    choices=speakers, value=speakers[0], label="Choose the speaker"
                 )
                 sdp_ratio = gr.Slider(
                     minimum=0, maximum=1, value=0.2, step=0.1, label="SDP/DP混合比"
@@ -248,7 +242,7 @@ if __name__ == "__main__":
                 language = gr.Dropdown(
                     choices=languages, value=languages[0], label="选择语言(新增mix混合选项)"
                 )
-                btn = gr.Button("生成音频！", variant="primary")
+                btn = gr.Button("Generate the Audio", variant="primary")
             with gr.Column():
                 with gr.Row():
                     with gr.Column():
@@ -271,7 +265,7 @@ if __name__ == "__main__":
                         )
                         slicer = gr.Button("切分生成", variant="primary")
                 text_output = gr.Textbox(label="状态信息")
-                audio_output = gr.Audio(label="输出音频")
+                audio_output = gr.Audio(label="Output Audio")
                 # explain_image = gr.Image(
                 #     label="参数解释信息",
                 #     show_label=True,

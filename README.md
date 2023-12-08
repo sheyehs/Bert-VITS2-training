@@ -1,32 +1,35 @@
-# Bert-VITS2
+# Bert-VITS2-training
 
-VITS2 Backbone with multipal-language bert
-## 请注意，本项目核心思路来源于[anyvoiceai/MassTTS](https://github.com/anyvoiceai/MassTTS) 一个非常好的tts项目
-## MassTTS的演示demo为[ai版峰哥锐评峰哥本人,并找回了在金三角失落的腰子](https://www.bilibili.com/video/BV1w24y1c7z9)
+This repo is based on the excellent [Bert-VITS2](https://github.com/fishaudio/Bert-VITS2) and only for the purpose of my school project.
 
-[//]: # (## 本项目与[PlayVoice/vits_chinese]&#40;https://github.com/PlayVoice/vits_chinese&#41; 没有任何关系)
 
-[//]: # ()
-[//]: # (本仓库来源于之前朋友分享了ai峰哥的视频，本人被其中的效果惊艳，在自己尝试MassTTS以后发现fs在音质方面与vits有一定差距，并且training的pipeline比vits更复杂，因此按照其思路将bert)
+## Python environment
+```bash
+git clone https://github.com/sheyehs/Bert-VITS2-training.git
+cd Bert-VITS2-training
+conda create -n vits2 python=3.10.0
+conda activate vits2
+pip install -r requirements.txt
+```
+The cloning may take a few minutes because it needs to download model weights.
+## Run the GUI
+```bash
+python webui.py
+```
+Refresh the webpage once if showing "Unable to connect".
+## How to exam for English graders?
+1. Open the Google Translation and translate your desired English sentences into Chinese(Simplified). For example this random sentence:
 
-## 成熟的旅行者/开拓者/舰长/博士/sensei/猎魔人/喵喵露/V应当参阅代码自己学习如何训练。
+> I didn't expect so many people to see it, because I have a very thin voice and rarely talk. My friends and colleagues often say that I don’t think I care about my students.
 
-### 严禁将此项目用于一切违反《中华人民共和国宪法》，《中华人民共和国刑法》，《中华人民共和国治安管理处罚法》和《中华人民共和国民法典》之用途。
-### 严禁用于任何政治相关用途。
-#### Video:https://www.bilibili.com/video/BV1hp4y1K78E
-#### Demo:https://www.bilibili.com/video/BV1TF411k78w
-## References
-+ [anyvoiceai/MassTTS](https://github.com/anyvoiceai/MassTTS)
-+ [jaywalnut310/vits](https://github.com/jaywalnut310/vits)
-+ [p0p4k/vits2_pytorch](https://github.com/p0p4k/vits2_pytorch)
-+ [svc-develop-team/so-vits-svc](https://github.com/svc-develop-team/so-vits-svc)
-+ [PaddlePaddle/PaddleSpeech](https://github.com/PaddlePaddle/PaddleSpeech)
-+ [emotional-vits](https://github.com/innnky/emotional-vits)
-+ [Bert-VITS2-en](https://github.com/xwan07017/Bert-VITS2-en)
-+ [Bert-VITS2-UI](https://github.com/jiangyuxiaoxiao/Bert-VITS2-UI)
-## 感谢所有贡献者作出的努力
-<a href="https://github.com/fishaudio/Bert-VITS2/graphs/contributors" target="_blank">
-  <img src="https://contrib.rocks/image?repo=fishaudio/Bert-VITS2"/>
-</a>
-
-[//]: # (# 本项目所有代码引用均已写明，bert部分代码思路来源于[AI峰哥]&#40;https://www.bilibili.com/video/BV1w24y1c7z9&#41;，与[vits_chinese]&#40;https://github.com/PlayVoice/vits_chinese&#41;无任何关系。欢迎各位查阅代码。同时，我们也对该开发者的[碰瓷，乃至开盒开发者的行为]&#40;https://www.bilibili.com/read/cv27101514/&#41;表示强烈谴责。)
+![](assets/step1.png)
+2. Cpoy the Chinese sentences to the input area
+![](assets/step2.png)
+3. Choose the second character because her sound is more moderate.
+![](assets/step3.png)
+4. Click the generation button.
+![](assets/step4.png)
+5. Download the audio file.
+![](assets/step5.png)
+6. Open a tool that can convert Chinese speech to text, for example [this website](https://convertspeech.com/zh-CN/).
+7. Open the Google Tranlation again and translate the result back to English and you can compare the difference.
