@@ -1,3 +1,4 @@
 custom/genshin_FNN_HT/models/D_82000.pth filter=lfs diff=lfs merge=lfs -text
 custom/genshin_FNN_HT/models/DUR_82000.pth filter=lfs diff=lfs merge=lfs -text
 custom/genshin_FNN_HT/models/G_82000.pth filter=lfs diff=lfs merge=lfs -text
+bert/chinese-roberta-wwm-ext-large/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
