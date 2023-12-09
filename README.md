@@ -31,5 +31,6 @@ Refresh the webpage once if showing "Unable to connect".
 ![](assets/step4.png)
 5. Download the audio file.
 ![](assets/step5.png)
-6. Open a tool that can convert Chinese speech to text, for example [this website](https://convertspeech.com/zh-CN/).
+6. Open a tool that can convert Chinese speech to text, for example [this website](https://convertspeech.com/zh-CN/). Then copy the conversion result.
+![](assets/step6.png)
 7. Open the Google Tranlation again and translate the result back to English and you can compare the difference.
